@@ -1,0 +1,4 @@
+.card__button-likes_active {
+  background: url('../../../../images/icon-likes_active.svg')  no-repeat center;
+  transition: all .2s linear ease-in-out;
+}
