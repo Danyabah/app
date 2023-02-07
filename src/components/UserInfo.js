@@ -16,4 +16,7 @@ export class UserInfo {
     this._avatar.src = avatar;
     this._userId = _id;
   }
+  getUserId() {
+    return this._userId;
+  }
 }

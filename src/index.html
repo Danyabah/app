@@ -18,15 +18,13 @@
 
     <main class="content">
       <section class="profile">
-        <img
-          src="<%=require('./images/avatar.jpeg')%>"
-          alt="Аватар"
-          class="profile__avatar"
-        />
+        <div class="profile__avatar-edit">
+          <img src="" alt="Аватар" class="profile__avatar" />
+        </div>
         <div class="profile__info">
-          <h1 class="profile__name">Жак-Ив Кусто</h1>
+          <h1 class="profile__name"></h1>
           <button type="button" class="profile__edit-button btn"></button>
-          <p class="profile__work">Исследователь океана</p>
+          <p class="profile__work"></p>
         </div>
         <button type="button" class="profile__add-button btn"></button>
       </section>
@@ -120,9 +118,9 @@
       </div>
 
       <div class="popup popup_type_del-confirm">
-        <div class="popup__container">
-          <h2 class="popup__title">Вы уверены?</h2>
-          <form class="form form_type_new-card" name="add-form" novalidate>
+        <div class="popup__container popup__container-delete">
+          <h2 class="popup__title popup__title-delete">Вы уверены?</h2>
+          <form class="form form_type_new-card" name="confirm" novalidate>
             <button class="form__button" type="submit">Да</button>
           </form>
           <button
@@ -132,7 +130,6 @@
           ></button>
         </div>
       </div>
-
 
       <div class="popup popup_type_image-preview">
         <div class="popup__image-container">
@@ -147,16 +144,42 @@
       </div>
     </div>
 
+    <div class="popup popup__avatar">
+      <div class="popup__container">
+        <form name="avatar" class="popup__form" novalidate>
+          <button
+            class="popup__close-button button button_opacity_page"
+            type="button"
+          ></button>
+          <h3 class="popup__title">Обновить аватар</h3>
+          <input
+            class="form__input form__input_card_link"
+            id="card-link-input"
+            name="cardLink"
+            type="url"
+            placeholder="Ссылка на изображение"
+            autocomplete="off"
+            required
+          />
+          <span class="form__input-error card-link-input-error"></span>
+          <button class="form__button" type="submit">Сохранить</button>
+        </form>
+      </div>
+    </div>
+
     <template id="card-template">
       <li class="card__item">
         <img class="card__image" />
         <div class="card__description">
           <p class="card__title"></p>
-          <button
-            type="button"
-            class="card__button-likes btn"
-            aria-label="Сердечко"
-          ></button>
+          <div class="card__likes">
+            <button
+              type="button"
+              class="card__button-likes btn"
+              aria-label="Сердечко"
+            ></button>
+            <p class="card__likes-count"></p>
+          </div>
         </div>
         <button type="button" class="card__button-delete btn"></button>
       </li>

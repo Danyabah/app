@@ -1,5 +1,3 @@
-import { container } from "webpack";
-
 export class Section {
   constructor(object, containerSelector) {
     //this._items = object.items;
@@ -8,12 +6,12 @@ export class Section {
   }
   render(data) {
     data.forEach((element) => {
-    const card = this._renderer(element);
-    this._container.append(card)
+      const card = this._renderer(element);
+      this._container.append(card);
     });
   }
   addItem(htmlElement) {
-    const card = this._renderer(htmlElement)
+    const card = this._renderer(htmlElement);
     this._container.prepend(card);
   }
 }

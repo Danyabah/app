@@ -9,6 +9,6 @@ export const popupImage = document.querySelector(".popup__image");
 export const popupImageTitle = document.querySelector(
   ".popup__image-description"
 );
-
+export const btnOpenAvatar = document.querySelector(".profile__avatar-edit");
 
 //popup_type_del-confirm
